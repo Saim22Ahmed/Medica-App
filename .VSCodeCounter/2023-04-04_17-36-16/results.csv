@@ -1,0 +1,72 @@
+"filename", "language", "C++", "JSON", "Markdown", "Swift", "HTML", "XML", "Dart", "YAML", "Groovy", "Properties", "comment", "blank", "total"
+"e:\Flutter Projects\medo_app\README.md", "Markdown", 0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 0, 7, 17
+"e:\Flutter Projects\medo_app\analysis_options.yaml", "YAML", 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 23, 4, 30
+"e:\Flutter Projects\medo_app\android\app\build.gradle", "Groovy", 0, 0, 0, 0, 0, 0, 0, 0, 54, 0, 5, 13, 72
+"e:\Flutter Projects\medo_app\android\app\src\debug\AndroidManifest.xml", "XML", 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 4, 1, 9
+"e:\Flutter Projects\medo_app\android\app\src\main\AndroidManifest.xml", "XML", 0, 0, 0, 0, 0, 28, 0, 0, 0, 0, 6, 1, 35
+"e:\Flutter Projects\medo_app\android\app\src\main\res\drawable-v21\launch_background.xml", "XML", 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 7, 2, 13
+"e:\Flutter Projects\medo_app\android\app\src\main\res\drawable\launch_background.xml", "XML", 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 7, 2, 13
+"e:\Flutter Projects\medo_app\android\app\src\main\res\values-night\styles.xml", "XML", 0, 0, 0, 0, 0, 9, 0, 0, 0, 0, 9, 1, 19
+"e:\Flutter Projects\medo_app\android\app\src\main\res\values\styles.xml", "XML", 0, 0, 0, 0, 0, 9, 0, 0, 0, 0, 9, 1, 19
+"e:\Flutter Projects\medo_app\android\app\src\profile\AndroidManifest.xml", "XML", 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 4, 1, 9
+"e:\Flutter Projects\medo_app\android\build.gradle", "Groovy", 0, 0, 0, 0, 0, 0, 0, 0, 27, 0, 0, 5, 32
+"e:\Flutter Projects\medo_app\android\gradle.properties", "Properties", 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 1, 4
+"e:\Flutter Projects\medo_app\android\gradle\wrapper\gradle-wrapper.properties", "Properties", 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 0, 1, 6
+"e:\Flutter Projects\medo_app\android\settings.gradle", "Groovy", 0, 0, 0, 0, 0, 0, 0, 0, 8, 0, 0, 4, 12
+"e:\Flutter Projects\medo_app\ios\Runner\AppDelegate.swift", "Swift", 0, 0, 0, 12, 0, 0, 0, 0, 0, 0, 0, 2, 14
+"e:\Flutter Projects\medo_app\ios\Runner\Assets.xcassets\AppIcon.appiconset\Contents.json", "JSON", 0, 122, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 123
+"e:\Flutter Projects\medo_app\ios\Runner\Assets.xcassets\LaunchImage.imageset\Contents.json", "JSON", 0, 23, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 24
+"e:\Flutter Projects\medo_app\ios\Runner\Assets.xcassets\LaunchImage.imageset\README.md", "Markdown", 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 2, 5
+"e:\Flutter Projects\medo_app\ios\Runner\Base.lproj\LaunchScreen.storyboard", "XML", 0, 0, 0, 0, 0, 36, 0, 0, 0, 0, 1, 1, 38
+"e:\Flutter Projects\medo_app\ios\Runner\Base.lproj\Main.storyboard", "XML", 0, 0, 0, 0, 0, 25, 0, 0, 0, 0, 1, 1, 27
+"e:\Flutter Projects\medo_app\ios\Runner\Runner-Bridging-Header.h", "C++", 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2
+"e:\Flutter Projects\medo_app\lib\main.dart", "Dart", 0, 0, 0, 0, 0, 0, 51, 0, 0, 0, 2, 5, 58
+"e:\Flutter Projects\medo_app\lib\models\DoctorModel.dart", "Dart", 0, 0, 0, 0, 0, 0, 23, 0, 0, 0, 0, 4, 27
+"e:\Flutter Projects\medo_app\lib\resources\colors.dart", "Dart", 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 2, 6
+"e:\Flutter Projects\medo_app\lib\resources\pics.dart", "Dart", 0, 0, 0, 0, 0, 0, 38, 0, 0, 0, 0, 2, 40
+"e:\Flutter Projects\medo_app\lib\resources\widgets.dart", "Dart", 0, 0, 0, 0, 0, 0, 201, 0, 0, 0, 17, 18, 236
+"e:\Flutter Projects\medo_app\lib\screens.dart\Auth_screens\Sign_in_screen.dart", "Dart", 0, 0, 0, 0, 0, 0, 124, 0, 0, 0, 21, 6, 151
+"e:\Flutter Projects\medo_app\lib\screens.dart\Auth_screens\favourites_screen\Item.dart", "Dart", 0, 0, 0, 0, 0, 0, 20, 0, 0, 0, 0, 4, 24
+"e:\Flutter Projects\medo_app\lib\screens.dart\Auth_screens\favourites_screen\fav_screen.dart", "Dart", 0, 0, 0, 0, 0, 0, 21, 0, 0, 0, 0, 3, 24
+"e:\Flutter Projects\medo_app\lib\screens.dart\Auth_screens\newacc_screen.dart", "Dart", 0, 0, 0, 0, 0, 0, 310, 0, 0, 0, 11, 7, 328
+"e:\Flutter Projects\medo_app\lib\screens.dart\Home_screen\bottombar.dart", "Dart", 0, 0, 0, 0, 0, 0, 77, 0, 0, 0, 35, 32, 144
+"e:\Flutter Projects\medo_app\lib\screens.dart\Home_screen\buttons.dart", "Dart", 0, 0, 0, 0, 0, 0, 52, 0, 0, 0, 9, 6, 67
+"e:\Flutter Projects\medo_app\lib\screens.dart\Home_screen\card.dart", "Dart", 0, 0, 0, 0, 0, 0, 124, 0, 0, 0, 0, 5, 129
+"e:\Flutter Projects\medo_app\lib\screens.dart\Home_screen\checkbutton.dart", "Dart", 0, 0, 0, 0, 0, 0, 42, 0, 0, 0, 0, 5, 47
+"e:\Flutter Projects\medo_app\lib\screens.dart\Home_screen\home_screen.dart", "Dart", 0, 0, 0, 0, 0, 0, 491, 0, 0, 0, 6, 17, 514
+"e:\Flutter Projects\medo_app\lib\screens.dart\Home_screen\list_view_item.dart", "Dart", 0, 0, 0, 0, 0, 0, 48, 0, 0, 0, 1, 5, 54
+"e:\Flutter Projects\medo_app\lib\screens.dart\Notification screen\MyListtile.dart", "Dart", 0, 0, 0, 0, 0, 0, 70, 0, 0, 0, 1, 7, 78
+"e:\Flutter Projects\medo_app\lib\screens.dart\Notification screen\newbutton.dart", "Dart", 0, 0, 0, 0, 0, 0, 27, 0, 0, 0, 0, 3, 30
+"e:\Flutter Projects\medo_app\lib\screens.dart\Notification screen\notification_screen.dart", "Dart", 0, 0, 0, 0, 0, 0, 134, 0, 0, 0, 0, 4, 138
+"e:\Flutter Projects\medo_app\lib\screens.dart\intro screens\intro_screen1.dart", "Dart", 0, 0, 0, 0, 0, 0, 190, 0, 0, 0, 17, 9, 216
+"e:\Flutter Projects\medo_app\lib\screens.dart\intro screens\intro_screen2.dart", "Dart", 0, 0, 0, 0, 0, 0, 186, 0, 0, 0, 17, 6, 209
+"e:\Flutter Projects\medo_app\lib\screens.dart\intro screens\intro_screen3.dart", "Dart", 0, 0, 0, 0, 0, 0, 203, 0, 0, 0, 25, 11, 239
+"e:\Flutter Projects\medo_app\lib\screens.dart\intro screens\intro_screens.dart", "Dart", 0, 0, 0, 0, 0, 0, 68, 0, 0, 0, 7, 5, 80
+"e:\Flutter Projects\medo_app\lib\screens.dart\splash_screens\splash_screen.dart", "Dart", 0, 0, 0, 0, 0, 0, 70, 0, 0, 0, 7, 6, 83
+"e:\Flutter Projects\medo_app\lib\screens.dart\splash_screens\splash_screen_2.dart", "Dart", 0, 0, 0, 0, 0, 0, 101, 0, 0, 0, 13, 6, 120
+"e:\Flutter Projects\medo_app\lib\utils\routes\routes_names.dart", "Dart", 0, 0, 0, 0, 0, 0, 11, 0, 0, 0, 0, 1, 12
+"e:\Flutter Projects\medo_app\linux\flutter\generated_plugin_registrant.cc", "C++", 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 5, 12
+"e:\Flutter Projects\medo_app\linux\flutter\generated_plugin_registrant.h", "C++", 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 6, 16
+"e:\Flutter Projects\medo_app\linux\main.cc", "C++", 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 7
+"e:\Flutter Projects\medo_app\linux\my_application.cc", "C++", 74, 0, 0, 0, 0, 0, 0, 0, 0, 0, 11, 20, 105
+"e:\Flutter Projects\medo_app\linux\my_application.h", "C++", 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 7, 5, 19
+"e:\Flutter Projects\medo_app\macos\Flutter\GeneratedPluginRegistrant.swift", "Swift", 0, 0, 0, 6, 0, 0, 0, 0, 0, 0, 3, 4, 13
+"e:\Flutter Projects\medo_app\macos\Runner\AppDelegate.swift", "Swift", 0, 0, 0, 8, 0, 0, 0, 0, 0, 0, 0, 2, 10
+"e:\Flutter Projects\medo_app\macos\Runner\Assets.xcassets\AppIcon.appiconset\Contents.json", "JSON", 0, 68, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 69
+"e:\Flutter Projects\medo_app\macos\Runner\Base.lproj\MainMenu.xib", "XML", 0, 0, 0, 0, 0, 343, 0, 0, 0, 0, 0, 1, 344
+"e:\Flutter Projects\medo_app\macos\Runner\MainFlutterWindow.swift", "Swift", 0, 0, 0, 12, 0, 0, 0, 0, 0, 0, 0, 4, 16
+"e:\Flutter Projects\medo_app\pubspec.yaml", "YAML", 0, 0, 0, 0, 0, 0, 0, 33, 0, 0, 49, 19, 101
+"e:\Flutter Projects\medo_app\test\widget_test.dart", "Dart", 0, 0, 0, 0, 0, 0, 14, 0, 0, 0, 10, 7, 31
+"e:\Flutter Projects\medo_app\web\index.html", "HTML", 0, 0, 0, 0, 38, 0, 0, 0, 0, 0, 16, 6, 60
+"e:\Flutter Projects\medo_app\web\manifest.json", "JSON", 0, 35, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 36
+"e:\Flutter Projects\medo_app\windows\flutter\generated_plugin_registrant.cc", "C++", 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 5, 12
+"e:\Flutter Projects\medo_app\windows\flutter\generated_plugin_registrant.h", "C++", 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 6, 16
+"e:\Flutter Projects\medo_app\windows\runner\flutter_window.cpp", "C++", 48, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 15, 67
+"e:\Flutter Projects\medo_app\windows\runner\flutter_window.h", "C++", 20, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 9, 34
+"e:\Flutter Projects\medo_app\windows\runner\main.cpp", "C++", 30, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 10, 44
+"e:\Flutter Projects\medo_app\windows\runner\resource.h", "C++", 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 2, 17
+"e:\Flutter Projects\medo_app\windows\runner\utils.cpp", "C++", 53, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 10, 65
+"e:\Flutter Projects\medo_app\windows\runner\utils.h", "C++", 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6, 6, 20
+"e:\Flutter Projects\medo_app\windows\runner\win32_window.cpp", "C++", 210, 0, 0, 0, 0, 0, 0, 0, 0, 0, 24, 55, 289
+"e:\Flutter Projects\medo_app\windows\runner\win32_window.h", "C++", 48, 0, 0, 0, 0, 0, 0, 0, 0, 0, 31, 24, 103
+"Total", "-", 529, 248, 13, 38, 38, 466, 2700, 36, 89, 8, 461, 457, 5083

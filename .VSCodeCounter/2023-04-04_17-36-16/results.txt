@@ -1,0 +1,156 @@
+Date : 2023-04-04 17:36:16
+Directory : e:\Flutter Projects\medo_app
+Total : 70 files,  4165 codes, 461 comments, 457 blanks, all 5083 lines
+
+Languages
++------------+------------+------------+------------+------------+------------+
+| language   | files      | code       | comment    | blank      | total      |
++------------+------------+------------+------------+------------+------------+
+| Dart       |         26 |      2,700 |        199 |        186 |      3,085 |
+| C++        |         16 |        529 |        118 |        181 |        828 |
+| XML        |         10 |        466 |         48 |         12 |        526 |
+| JSON       |          4 |        248 |          0 |          4 |        252 |
+| Groovy     |          3 |         89 |          5 |         22 |        116 |
+| Swift      |          4 |         38 |          3 |         12 |         53 |
+| HTML       |          1 |         38 |         16 |          6 |         60 |
+| YAML       |          2 |         36 |         72 |         23 |        131 |
+| Markdown   |          2 |         13 |          0 |          9 |         22 |
+| Properties |          2 |          8 |          0 |          2 |         10 |
++------------+------------+------------+------------+------------+------------+
+
+Directories
++----------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                         | files      | code       | comment    | blank      | total      |
++----------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                            |         70 |      4,165 |        461 |        457 |      5,083 |
+| . (Files)                                                                                    |          3 |         46 |         72 |         30 |        148 |
+| android                                                                                      |         12 |        159 |         51 |         33 |        243 |
+| android (Files)                                                                              |          3 |         38 |          0 |         10 |         48 |
+| android\app                                                                                  |          8 |        116 |         51 |         22 |        189 |
+| android\app (Files)                                                                          |          1 |         54 |          5 |         13 |         72 |
+| android\app\src                                                                              |          7 |         62 |         46 |          9 |        117 |
+| android\app\src\debug                                                                        |          1 |          4 |          4 |          1 |          9 |
+| android\app\src\main                                                                         |          5 |         54 |         38 |          7 |         99 |
+| android\app\src\main (Files)                                                                 |          1 |         28 |          6 |          1 |         35 |
+| android\app\src\main\res                                                                     |          4 |         26 |         32 |          6 |         64 |
+| android\app\src\main\res\drawable                                                            |          1 |          4 |          7 |          2 |         13 |
+| android\app\src\main\res\drawable-v21                                                        |          1 |          4 |          7 |          2 |         13 |
+| android\app\src\main\res\values                                                              |          1 |          9 |          9 |          1 |         19 |
+| android\app\src\main\res\values-night                                                        |          1 |          9 |          9 |          1 |         19 |
+| android\app\src\profile                                                                      |          1 |          4 |          4 |          1 |          9 |
+| android\gradle                                                                               |          1 |          5 |          0 |          1 |          6 |
+| android\gradle\wrapper                                                                       |          1 |          5 |          0 |          1 |          6 |
+| ios                                                                                          |          7 |        222 |          2 |          9 |        233 |
+| ios\Runner                                                                                   |          7 |        222 |          2 |          9 |        233 |
+| ios\Runner (Files)                                                                           |          2 |         13 |          0 |          3 |         16 |
+| ios\Runner\Assets.xcassets                                                                   |          3 |        148 |          0 |          4 |        152 |
+| ios\Runner\Assets.xcassets\AppIcon.appiconset                                                |          1 |        122 |          0 |          1 |        123 |
+| ios\Runner\Assets.xcassets\LaunchImage.imageset                                              |          2 |         26 |          0 |          3 |         29 |
+| ios\Runner\Base.lproj                                                                        |          2 |         61 |          2 |          2 |         65 |
+| lib                                                                                          |         25 |      2,686 |        189 |        179 |      3,054 |
+| lib (Files)                                                                                  |          1 |         51 |          2 |          5 |         58 |
+| lib\models                                                                                   |          1 |         23 |          0 |          4 |         27 |
+| lib\resources                                                                                |          3 |        243 |         17 |         22 |        282 |
+| lib\screens.dart                                                                             |         19 |      2,358 |        170 |        147 |      2,675 |
+| lib\screens.dart\Auth_screens                                                                |          4 |        475 |         32 |         20 |        527 |
+| lib\screens.dart\Auth_screens (Files)                                                        |          2 |        434 |         32 |         13 |        479 |
+| lib\screens.dart\Auth_screens\favourites_screen                                              |          2 |         41 |          0 |          7 |         48 |
+| lib\screens.dart\Home_screen                                                                 |          6 |        834 |         51 |         70 |        955 |
+| lib\screens.dart\Notification screen                                                         |          3 |        231 |          1 |         14 |        246 |
+| lib\screens.dart\intro screens                                                               |          4 |        647 |         66 |         31 |        744 |
+| lib\screens.dart\splash_screens                                                              |          2 |        171 |         20 |         12 |        203 |
+| lib\utils                                                                                    |          1 |         11 |          0 |          1 |         12 |
+| lib\utils\routes                                                                             |          1 |         11 |          0 |          1 |         12 |
+| linux                                                                                        |          5 |         94 |         27 |         38 |        159 |
+| linux (Files)                                                                                |          3 |         86 |         18 |         27 |        131 |
+| linux\flutter                                                                                |          2 |          8 |          9 |         11 |         28 |
+| macos                                                                                        |          5 |        437 |          3 |         12 |        452 |
+| macos\Flutter                                                                                |          1 |          6 |          3 |          4 |         13 |
+| macos\Runner                                                                                 |          4 |        431 |          0 |          8 |        439 |
+| macos\Runner (Files)                                                                         |          2 |         20 |          0 |          6 |         26 |
+| macos\Runner\Assets.xcassets                                                                 |          1 |         68 |          0 |          1 |         69 |
+| macos\Runner\Assets.xcassets\AppIcon.appiconset                                              |          1 |         68 |          0 |          1 |         69 |
+| macos\Runner\Base.lproj                                                                      |          1 |        343 |          0 |          1 |        344 |
+| test                                                                                         |          1 |         14 |         10 |          7 |         31 |
+| web                                                                                          |          2 |         73 |         16 |          7 |         96 |
+| windows                                                                                      |         10 |        434 |         91 |        142 |        667 |
+| windows\flutter                                                                              |          2 |          8 |          9 |         11 |         28 |
+| windows\runner                                                                               |          8 |        426 |         82 |        131 |        639 |
++----------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++----------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| filename                                                                                     | language   | code       | comment    | blank      | total      |
++----------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| e:\Flutter Projects\medo_app\README.md                                                       | Markdown   |         10 |          0 |          7 |         17 |
+| e:\Flutter Projects\medo_app\analysis_options.yaml                                           | YAML       |          3 |         23 |          4 |         30 |
+| e:\Flutter Projects\medo_app\android\app\build.gradle                                        | Groovy     |         54 |          5 |         13 |         72 |
+| e:\Flutter Projects\medo_app\android\app\src\debug\AndroidManifest.xml                       | XML        |          4 |          4 |          1 |          9 |
+| e:\Flutter Projects\medo_app\android\app\src\main\AndroidManifest.xml                        | XML        |         28 |          6 |          1 |         35 |
+| e:\Flutter Projects\medo_app\android\app\src\main\res\drawable-v21\launch_background.xml     | XML        |          4 |          7 |          2 |         13 |
+| e:\Flutter Projects\medo_app\android\app\src\main\res\drawable\launch_background.xml         | XML        |          4 |          7 |          2 |         13 |
+| e:\Flutter Projects\medo_app\android\app\src\main\res\values-night\styles.xml                | XML        |          9 |          9 |          1 |         19 |
+| e:\Flutter Projects\medo_app\android\app\src\main\res\values\styles.xml                      | XML        |          9 |          9 |          1 |         19 |
+| e:\Flutter Projects\medo_app\android\app\src\profile\AndroidManifest.xml                     | XML        |          4 |          4 |          1 |          9 |
+| e:\Flutter Projects\medo_app\android\build.gradle                                            | Groovy     |         27 |          0 |          5 |         32 |
+| e:\Flutter Projects\medo_app\android\gradle.properties                                       | Properties |          3 |          0 |          1 |          4 |
+| e:\Flutter Projects\medo_app\android\gradle\wrapper\gradle-wrapper.properties                | Properties |          5 |          0 |          1 |          6 |
+| e:\Flutter Projects\medo_app\android\settings.gradle                                         | Groovy     |          8 |          0 |          4 |         12 |
+| e:\Flutter Projects\medo_app\ios\Runner\AppDelegate.swift                                    | Swift      |         12 |          0 |          2 |         14 |
+| e:\Flutter Projects\medo_app\ios\Runner\Assets.xcassets\AppIcon.appiconset\Contents.json     | JSON       |        122 |          0 |          1 |        123 |
+| e:\Flutter Projects\medo_app\ios\Runner\Assets.xcassets\LaunchImage.imageset\Contents.json   | JSON       |         23 |          0 |          1 |         24 |
+| e:\Flutter Projects\medo_app\ios\Runner\Assets.xcassets\LaunchImage.imageset\README.md       | Markdown   |          3 |          0 |          2 |          5 |
+| e:\Flutter Projects\medo_app\ios\Runner\Base.lproj\LaunchScreen.storyboard                   | XML        |         36 |          1 |          1 |         38 |
+| e:\Flutter Projects\medo_app\ios\Runner\Base.lproj\Main.storyboard                           | XML        |         25 |          1 |          1 |         27 |
+| e:\Flutter Projects\medo_app\ios\Runner\Runner-Bridging-Header.h                             | C++        |          1 |          0 |          1 |          2 |
+| e:\Flutter Projects\medo_app\lib\main.dart                                                   | Dart       |         51 |          2 |          5 |         58 |
+| e:\Flutter Projects\medo_app\lib\models\DoctorModel.dart                                     | Dart       |         23 |          0 |          4 |         27 |
+| e:\Flutter Projects\medo_app\lib\resources\colors.dart                                       | Dart       |          4 |          0 |          2 |          6 |
+| e:\Flutter Projects\medo_app\lib\resources\pics.dart                                         | Dart       |         38 |          0 |          2 |         40 |
+| e:\Flutter Projects\medo_app\lib\resources\widgets.dart                                      | Dart       |        201 |         17 |         18 |        236 |
+| e:\Flutter Projects\medo_app\lib\screens.dart\Auth_screens\Sign_in_screen.dart               | Dart       |        124 |         21 |          6 |        151 |
+| e:\Flutter Projects\medo_app\lib\screens.dart\Auth_screens\favourites_screen\Item.dart       | Dart       |         20 |          0 |          4 |         24 |
+| e:\Flutter Projects\medo_app\lib\screens.dart\Auth_screens\favourites_screen\fav_screen.dart | Dart       |         21 |          0 |          3 |         24 |
+| e:\Flutter Projects\medo_app\lib\screens.dart\Auth_screens\newacc_screen.dart                | Dart       |        310 |         11 |          7 |        328 |
+| e:\Flutter Projects\medo_app\lib\screens.dart\Home_screen\bottombar.dart                     | Dart       |         77 |         35 |         32 |        144 |
+| e:\Flutter Projects\medo_app\lib\screens.dart\Home_screen\buttons.dart                       | Dart       |         52 |          9 |          6 |         67 |
+| e:\Flutter Projects\medo_app\lib\screens.dart\Home_screen\card.dart                          | Dart       |        124 |          0 |          5 |        129 |
+| e:\Flutter Projects\medo_app\lib\screens.dart\Home_screen\checkbutton.dart                   | Dart       |         42 |          0 |          5 |         47 |
+| e:\Flutter Projects\medo_app\lib\screens.dart\Home_screen\home_screen.dart                   | Dart       |        491 |          6 |         17 |        514 |
+| e:\Flutter Projects\medo_app\lib\screens.dart\Home_screen\list_view_item.dart                | Dart       |         48 |          1 |          5 |         54 |
+| e:\Flutter Projects\medo_app\lib\screens.dart\Notification screen\MyListtile.dart            | Dart       |         70 |          1 |          7 |         78 |
+| e:\Flutter Projects\medo_app\lib\screens.dart\Notification screen\newbutton.dart             | Dart       |         27 |          0 |          3 |         30 |
+| e:\Flutter Projects\medo_app\lib\screens.dart\Notification screen\notification_screen.dart   | Dart       |        134 |          0 |          4 |        138 |
+| e:\Flutter Projects\medo_app\lib\screens.dart\intro screens\intro_screen1.dart               | Dart       |        190 |         17 |          9 |        216 |
+| e:\Flutter Projects\medo_app\lib\screens.dart\intro screens\intro_screen2.dart               | Dart       |        186 |         17 |          6 |        209 |
+| e:\Flutter Projects\medo_app\lib\screens.dart\intro screens\intro_screen3.dart               | Dart       |        203 |         25 |         11 |        239 |
+| e:\Flutter Projects\medo_app\lib\screens.dart\intro screens\intro_screens.dart               | Dart       |         68 |          7 |          5 |         80 |
+| e:\Flutter Projects\medo_app\lib\screens.dart\splash_screens\splash_screen.dart              | Dart       |         70 |          7 |          6 |         83 |
+| e:\Flutter Projects\medo_app\lib\screens.dart\splash_screens\splash_screen_2.dart            | Dart       |        101 |         13 |          6 |        120 |
+| e:\Flutter Projects\medo_app\lib\utils\routes\routes_names.dart                              | Dart       |         11 |          0 |          1 |         12 |
+| e:\Flutter Projects\medo_app\linux\flutter\generated_plugin_registrant.cc                    | C++        |          3 |          4 |          5 |         12 |
+| e:\Flutter Projects\medo_app\linux\flutter\generated_plugin_registrant.h                     | C++        |          5 |          5 |          6 |         16 |
+| e:\Flutter Projects\medo_app\linux\main.cc                                                   | C++        |          5 |          0 |          2 |          7 |
+| e:\Flutter Projects\medo_app\linux\my_application.cc                                         | C++        |         74 |         11 |         20 |        105 |
+| e:\Flutter Projects\medo_app\linux\my_application.h                                          | C++        |          7 |          7 |          5 |         19 |
+| e:\Flutter Projects\medo_app\macos\Flutter\GeneratedPluginRegistrant.swift                   | Swift      |          6 |          3 |          4 |         13 |
+| e:\Flutter Projects\medo_app\macos\Runner\AppDelegate.swift                                  | Swift      |          8 |          0 |          2 |         10 |
+| e:\Flutter Projects\medo_app\macos\Runner\Assets.xcassets\AppIcon.appiconset\Contents.json   | JSON       |         68 |          0 |          1 |         69 |
+| e:\Flutter Projects\medo_app\macos\Runner\Base.lproj\MainMenu.xib                            | XML        |        343 |          0 |          1 |        344 |
+| e:\Flutter Projects\medo_app\macos\Runner\MainFlutterWindow.swift                            | Swift      |         12 |          0 |          4 |         16 |
+| e:\Flutter Projects\medo_app\pubspec.yaml                                                    | YAML       |         33 |         49 |         19 |        101 |
+| e:\Flutter Projects\medo_app\test\widget_test.dart                                           | Dart       |         14 |         10 |          7 |         31 |
+| e:\Flutter Projects\medo_app\web\index.html                                                  | HTML       |         38 |         16 |          6 |         60 |
+| e:\Flutter Projects\medo_app\web\manifest.json                                               | JSON       |         35 |          0 |          1 |         36 |
+| e:\Flutter Projects\medo_app\windows\flutter\generated_plugin_registrant.cc                  | C++        |          3 |          4 |          5 |         12 |
+| e:\Flutter Projects\medo_app\windows\flutter\generated_plugin_registrant.h                   | C++        |          5 |          5 |          6 |         16 |
+| e:\Flutter Projects\medo_app\windows\runner\flutter_window.cpp                               | C++        |         48 |          4 |         15 |         67 |
+| e:\Flutter Projects\medo_app\windows\runner\flutter_window.h                                 | C++        |         20 |          5 |          9 |         34 |
+| e:\Flutter Projects\medo_app\windows\runner\main.cpp                                         | C++        |         30 |          4 |         10 |         44 |
+| e:\Flutter Projects\medo_app\windows\runner\resource.h                                       | C++        |          9 |          6 |          2 |         17 |
+| e:\Flutter Projects\medo_app\windows\runner\utils.cpp                                        | C++        |         53 |          2 |         10 |         65 |
+| e:\Flutter Projects\medo_app\windows\runner\utils.h                                          | C++        |          8 |          6 |          6 |         20 |
+| e:\Flutter Projects\medo_app\windows\runner\win32_window.cpp                                 | C++        |        210 |         24 |         55 |        289 |
+| e:\Flutter Projects\medo_app\windows\runner\win32_window.h                                   | C++        |         48 |         31 |         24 |        103 |
+| Total                                                                                        |            |      4,165 |        461 |        457 |      5,083 |
++----------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
