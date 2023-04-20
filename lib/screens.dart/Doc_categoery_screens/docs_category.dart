@@ -25,7 +25,7 @@ class DocsCategory extends StatefulWidget {
 class _DocsCategoryState extends State<DocsCategory> {
   @override
   Widget build(BuildContext context) {
-    print('DocsCategory');
+    print('DocsCatego');
     final containerIndex = ModalRoute.of(context)!.settings.arguments as int;
 
     return Scaffold(
