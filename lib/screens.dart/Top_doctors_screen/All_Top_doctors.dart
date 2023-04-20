@@ -8,7 +8,7 @@ import 'package:medo_app/resources/pics.dart';
 import 'package:provider/provider.dart';
 
 import '../../models/DoctorModel.dart';
-import '../favourites_screen/ItemWidget.dart';
+import '../../resources/widgets/ItemWidget.dart';
 import '../favourites_screen/ThemeAppbar.dart';
 import '../Home_screen/list_view_item.dart';
 import '../../utils/routes/routes_names.dart';
@@ -66,6 +66,7 @@ class _TopDoctorsState extends State<TopDoctors> {
                       image: value.cartitems.contains(index)
                           ? MyPics.blueheart
                           : MyPics.ufblueheart,
+                      ItemClickHandler: () {},
                     );
                   });
                 },

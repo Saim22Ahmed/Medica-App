@@ -5,7 +5,7 @@ import 'package:medo_app/Provider/DoctorsProvider.dart';
 import 'package:medo_app/Provider/Favourite_Provider.dart';
 import 'package:medo_app/models/DoctorModel.dart';
 import 'package:medo_app/resources/pics.dart';
-import 'package:medo_app/screens.dart/favourites_screen/ItemWidget.dart';
+import 'package:medo_app/resources/widgets/ItemWidget.dart';
 import 'package:medo_app/screens.dart/favourites_screen/ThemeAppbar.dart';
 import 'package:medo_app/screens.dart/favourites_screen/fav_screen.dart';
 import 'package:provider/provider.dart';
@@ -38,7 +38,7 @@ class _DocsCategoryState extends State<DocsCategory> {
         body: Column(
           children: [
             TopDocsBar(),
-            containerIndex == 0 ? Top_Docs() : SizedBox.shrink(),
+            containerIndex == 0 ? All_Top_Docs() : SizedBox.shrink(),
             containerIndex == 1 ? General_Docs() : SizedBox.shrink(),
             containerIndex == 2 ? Dentist() : SizedBox.shrink(),
             containerIndex == 3 ? Nutritionist() : SizedBox.shrink(),
@@ -50,11 +50,11 @@ class _DocsCategoryState extends State<DocsCategory> {
 }
 
 //
-class Top_Docs extends StatelessWidget {
-  Top_Docs({
+class All_Top_Docs extends StatelessWidget {
+  All_Top_Docs({
     super.key,
   });
-  DoctorCategory docscategory = DoctorCategory();
+  DoctorCategoryModel docscategory = DoctorCategoryModel();
   @override
   Widget build(BuildContext context) {
     return Expanded(child: Consumer<FavoutitesModelProvider>(
@@ -63,8 +63,9 @@ class Top_Docs extends StatelessWidget {
           physics: BouncingScrollPhysics(),
           itemCount: docscategory.alldocs.length,
           itemBuilder: (context, index) {
+            final currentpage = docscategory.alldocs[index];
             return ItemWidget(
-              item: docscategory.alldocs[index],
+              item: currentpage,
               ontap: () {
                 if (value.cartitems.contains(index)) {
                   value.RemoveItemFromFav(index);
@@ -75,7 +76,7 @@ class Top_Docs extends StatelessWidget {
               image: value.cartitems.contains(index)
                   ? MyPics.blueheart
                   : MyPics.ufblueheart,
-              // hii
+              ItemClickHandler: () {},
             );
           },
         );
@@ -90,7 +91,7 @@ class General_Docs extends StatelessWidget {
   General_Docs({
     super.key,
   });
-  DoctorCategory docscategory = DoctorCategory();
+  DoctorCategoryModel docscategory = DoctorCategoryModel();
   @override
   Widget build(BuildContext context) {
     return Expanded(child: Consumer<FavoutitesModelProvider>(
@@ -111,6 +112,7 @@ class General_Docs extends StatelessWidget {
               image: value.cartitems.contains(index)
                   ? MyPics.blueheart
                   : MyPics.ufblueheart,
+              ItemClickHandler: () {},
             );
           },
         );
@@ -123,7 +125,7 @@ class Dentist extends StatelessWidget {
   Dentist({
     super.key,
   });
-  DoctorCategory docscategory = DoctorCategory();
+  DoctorCategoryModel docscategory = DoctorCategoryModel();
   @override
   Widget build(BuildContext context) {
     print('Dentist Wigdet');
@@ -145,6 +147,7 @@ class Dentist extends StatelessWidget {
               image: value.cartitems.contains(index)
                   ? MyPics.blueheart
                   : MyPics.ufblueheart,
+              ItemClickHandler: () {},
             );
           },
         );
@@ -157,7 +160,7 @@ class Nutritionist extends StatelessWidget {
   Nutritionist({
     super.key,
   });
-  DoctorCategory docscategory = DoctorCategory();
+  DoctorCategoryModel docscategory = DoctorCategoryModel();
   @override
   Widget build(BuildContext context) {
     return Expanded(child: Consumer<FavoutitesModelProvider>(
@@ -167,18 +170,18 @@ class Nutritionist extends StatelessWidget {
           itemCount: docscategory.nutritionist.length,
           itemBuilder: (context, index) {
             return ItemWidget(
-              item: docscategory.nutritionist[index],
-              ontap: () {
-                if (value.cartitems.contains(index)) {
-                  value.RemoveItemFromFav(index);
-                } else {
-                  value.AddItemsToFav(index);
-                }
-              },
-              image: value.cartitems.contains(index)
-                  ? MyPics.blueheart
-                  : MyPics.ufblueheart,
-            );
+                item: docscategory.nutritionist[index],
+                ontap: () {
+                  if (value.cartitems.contains(index)) {
+                    value.RemoveItemFromFav(index);
+                  } else {
+                    value.AddItemsToFav(index);
+                  }
+                },
+                image: value.cartitems.contains(index)
+                    ? MyPics.blueheart
+                    : MyPics.ufblueheart,
+                ItemClickHandler: () {});
           },
         );
       },
@@ -190,7 +193,7 @@ class Opthalmologist extends StatelessWidget {
   Opthalmologist({
     super.key,
   });
-  DoctorCategory docscategory = DoctorCategory();
+  DoctorCategoryModel docscategory = DoctorCategoryModel();
   @override
   Widget build(BuildContext context) {
     return Expanded(child: Consumer<FavoutitesModelProvider>(
@@ -200,18 +203,18 @@ class Opthalmologist extends StatelessWidget {
           itemCount: docscategory.Opthalmologist.length,
           itemBuilder: (context, index) {
             return ItemWidget(
-              item: docscategory.Opthalmologist[index],
-              ontap: () {
-                if (value.cartitems.contains(index)) {
-                  value.RemoveItemFromFav(index);
-                } else {
-                  value.AddItemsToFav(index);
-                }
-              },
-              image: value.cartitems.contains(index)
-                  ? MyPics.blueheart
-                  : MyPics.ufblueheart,
-            );
+                item: docscategory.Opthalmologist[index],
+                ontap: () {
+                  if (value.cartitems.contains(index)) {
+                    value.RemoveItemFromFav(index);
+                  } else {
+                    value.AddItemsToFav(index);
+                  }
+                },
+                image: value.cartitems.contains(index)
+                    ? MyPics.blueheart
+                    : MyPics.ufblueheart,
+                ItemClickHandler: () {});
           },
         );
       },
@@ -223,7 +226,7 @@ class Pediatric extends StatelessWidget {
   Pediatric({
     super.key,
   });
-  DoctorCategory docscategory = DoctorCategory();
+  DoctorCategoryModel docscategory = DoctorCategoryModel();
   @override
   Widget build(BuildContext context) {
     return Expanded(child: Consumer<FavoutitesModelProvider>(
@@ -233,18 +236,18 @@ class Pediatric extends StatelessWidget {
           itemCount: docscategory.Pediatric.length,
           itemBuilder: (context, index) {
             return ItemWidget(
-              item: docscategory.Pediatric[index],
-              ontap: () {
-                if (value.cartitems.contains(index)) {
-                  value.RemoveItemFromFav(index);
-                } else {
-                  value.AddItemsToFav(index);
-                }
-              },
-              image: value.cartitems.contains(index)
-                  ? MyPics.blueheart
-                  : MyPics.ufblueheart,
-            );
+                item: docscategory.Pediatric[index],
+                ontap: () {
+                  if (value.cartitems.contains(index)) {
+                    value.RemoveItemFromFav(index);
+                  } else {
+                    value.AddItemsToFav(index);
+                  }
+                },
+                image: value.cartitems.contains(index)
+                    ? MyPics.blueheart
+                    : MyPics.ufblueheart,
+                ItemClickHandler: () {});
           },
         );
       },

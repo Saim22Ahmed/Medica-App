@@ -4,7 +4,7 @@ import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:medo_app/models/DoctorModel.dart';
 import 'package:medo_app/screens.dart/favourites_screen/ThemeAppbar.dart';
-import 'package:medo_app/screens.dart/favourites_screen/ItemWidget.dart';
+import 'package:medo_app/resources/widgets/ItemWidget.dart';
 import 'package:medo_app/utils/routes/routes_names.dart';
 import 'package:provider/provider.dart';
 
@@ -48,6 +48,7 @@ class Favourites_screen extends StatelessWidget {
                   image: value.cartitems.contains(index)
                       ? MyPics.blueheart
                       : MyPics.ufblueheart,
+                  ItemClickHandler: () {},
                 );
               },
             );

@@ -89,7 +89,7 @@ class Item {
   });
 }
 
-class DoctorCategory {
+class DoctorCategoryModel {
   List<Item> alldocs = DoctorModel.items
       .where((item) =>
           item.category == 'General' ||
