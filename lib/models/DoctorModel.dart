@@ -54,6 +54,13 @@ class DoctorModel {
         reviews: '4.6  (4,444 reviews)',
         category: 'Opthalmologist'),
     Item(
+        image: Docpics.opthalmologist1,
+        trailing: MyPics.Hearticon,
+        name: 'Dr. Tim Pattinson',
+        desc: 'Opthalmologist  |  Brooklyn Hospital',
+        reviews: '4.8  (5,435 reviews)',
+        category: 'Opthalmologist'),
+    Item(
       image: Docpics.Nutritionist,
       trailing: MyPics.Hearticon,
       name: 'Dr. William Thomas',

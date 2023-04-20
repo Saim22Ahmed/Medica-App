@@ -53,4 +53,6 @@ class Docpics {
   static AssetImage Pediatric1 = AssetImage('assets/images/Pediatric1.png');
   static AssetImage opthalmologist =
       AssetImage('assets/images/opthalmologist.png');
+  static AssetImage opthalmologist1 =
+      AssetImage('assets/images/opthalmologist1.jpg');
 }
