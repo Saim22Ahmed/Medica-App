@@ -5,17 +5,13 @@ import 'package:medo_app/screens.dart/Doc_categoery_screens/docs_category.dart';
 
 import '../../models/DoctorModel.dart';
 
-class DoctorDetails extends StatelessWidget {
-  const DoctorDetails({
+class DoctorDetailsScreen extends StatelessWidget {
+  const DoctorDetailsScreen({
     super.key,
   });
 
   @override
   Widget build(BuildContext context) {
-    // final currentpage = ModalRoute.of(context)!.settings.arguments as dynamic;
-    // final DoctorCategoryModel doctor = currentpage;
-    final DoctorModel currentpage =
-        ModalRoute.of(context)!.settings.arguments as DoctorModel;
     return Scaffold(
       body: Text('sdsa'),
     );

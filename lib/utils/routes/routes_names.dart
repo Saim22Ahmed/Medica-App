@@ -12,4 +12,5 @@ class MyRoutes {
   static String TopDoctorsRoute = '/TopDoctor';
   static String DocsCategoryRoute = '/GenDoctor';
   static String DoctorDetailsRoutes = '/DoctorDetails';
+  static String DoctorScreenRoutes = '/DoctorScreen';
 }

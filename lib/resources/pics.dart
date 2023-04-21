@@ -55,4 +55,9 @@ class Docpics {
       AssetImage('assets/images/opthalmologist.png');
   static AssetImage opthalmologist1 =
       AssetImage('assets/images/opthalmologist1.jpg');
+  static AssetImage General2 =
+      AssetImage('assets/images/Asian_doc_cropped.png');
+  static AssetImage Radiologist = AssetImage('assets/images/Radiologist.png');
+  static AssetImage Nutritionist1 =
+      AssetImage('assets/images/Nutritionist1.png');
 }

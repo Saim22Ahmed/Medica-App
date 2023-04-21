@@ -14,7 +14,7 @@ class ItemWidget extends StatefulWidget {
   const ItemWidget(
       {super.key,
       required this.item,
-      required this.ontap,
+      this.ontap,
       required this.image,
       required this.ItemClickHandler});
 
@@ -29,6 +29,7 @@ class ItemWidget extends StatefulWidget {
 
 class _ItemWidgetState extends State<ItemWidget> {
   bool istap = false;
+
   @override
   Widget build(BuildContext context) {
     return Padding(

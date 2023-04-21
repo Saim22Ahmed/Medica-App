@@ -4,11 +4,12 @@ import 'package:medo_app/Provider/DoctorsProvider.dart';
 import 'package:medo_app/Provider/cardProvider.dart';
 import 'package:medo_app/screens.dart/Doc_categoery_screens/docs_category.dart';
 import 'package:medo_app/screens.dart/DoctorDetails/doctor_details.dart';
+import 'package:medo_app/screens.dart/Doctors_screen/Doctors_screen.dart';
 import 'package:medo_app/screens.dart/Top_doctors_screen/All_Top_doctors.dart';
 import 'package:medo_app/Provider/Favourite_Provider.dart';
 import 'package:medo_app/screens.dart/Top_doctors_screen/doc_category_screen.dart';
 import 'package:medo_app/models/DoctorModel.dart';
-import 'package:medo_app/resources/widgets/ItemWidget.dart';
+import 'package:medo_app/screens.dart/Doctors_screen/ItemWidget.dart';
 import 'package:medo_app/resources/pics.dart';
 import 'package:medo_app/screens.dart/favourites_screen/fav_screen.dart';
 import 'package:medo_app/screens.dart/Notification%20screen/notification_screen.dart';
@@ -44,8 +45,8 @@ class MyApp extends StatelessWidget {
           providers: [
             ChangeNotifierProvider(
                 create: (context) => FavoutitesModelProvider()),
-            ChangeNotifierProvider(create: (context) => DoctorsProvider()),
-            ChangeNotifierProvider(create: (context) => DocsCategoryProvider()),
+            // ChangeNotifierProvider(create: (context) => DoctorsProvider()),
+            // ChangeNotifierProvider(create: (context) => DocsCategoryProvider()),
             ChangeNotifierProvider(create: (context) => CardProvider()),
           ],
           child: MaterialApp(
@@ -55,7 +56,7 @@ class MyApp extends StatelessWidget {
               primarySwatch: Colors.blue,
               fontFamily: GoogleFonts.mukta().fontFamily,
             ),
-            home: HomeScreen(),
+            home: DoctorsScreen(),
             routes: {
               MyRoutes.SplashScr2Route: (context) => SplashScreen2(),
               MyRoutes.IntroRoute: (context) => IntroScreens(),
@@ -69,7 +70,8 @@ class MyApp extends StatelessWidget {
               MyRoutes.FavouritesRoute: (context) => Favourites_screen(),
               MyRoutes.TopDoctorsRoute: (context) => TopDoctors(),
               MyRoutes.DocsCategoryRoute: (context) => DocsCategory(),
-              MyRoutes.DoctorDetailsRoutes: (context) => DoctorDetails(),
+              MyRoutes.DoctorDetailsRoutes: (context) => DoctorDetailsScreen(),
+              MyRoutes.DoctorScreenRoutes: (context) => DoctorsScreen(),
             },
           ),
         );

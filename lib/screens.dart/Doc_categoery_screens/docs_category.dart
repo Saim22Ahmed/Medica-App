@@ -5,7 +5,7 @@ import 'package:medo_app/Provider/DoctorsProvider.dart';
 import 'package:medo_app/Provider/Favourite_Provider.dart';
 import 'package:medo_app/models/DoctorModel.dart';
 import 'package:medo_app/resources/pics.dart';
-import 'package:medo_app/resources/widgets/ItemWidget.dart';
+import 'package:medo_app/screens.dart/Doctors_screen/ItemWidget.dart';
 import 'package:medo_app/screens.dart/favourites_screen/ThemeAppbar.dart';
 import 'package:medo_app/screens.dart/favourites_screen/fav_screen.dart';
 import 'package:provider/provider.dart';
@@ -63,9 +63,9 @@ class All_Top_Docs extends StatelessWidget {
           physics: BouncingScrollPhysics(),
           itemCount: docscategory.alldocs.length,
           itemBuilder: (context, index) {
-            final currentpage = docscategory.alldocs[index];
+            final currentitem = docscategory.alldocs[index];
             return ItemWidget(
-              item: currentpage,
+              item: currentitem,
               ontap: () {
                 if (value.cartitems.contains(index)) {
                   value.RemoveItemFromFav(index);

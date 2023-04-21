@@ -1,69 +1,28 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:medo_app/resources/colors.dart';
 
+import '../../controllers/doctors_controllers/category_controller.dart';
 import '../../utils/routes/routes_names.dart';
 import 'list_view_item.dart';
 
-class TopDocsBar extends StatefulWidget {
-  const TopDocsBar({super.key});
+class TopDocsBar extends StatelessWidget {
+  TopDocsBar({super.key});
 
-  @override
-  State<TopDocsBar> createState() => _TopDocsBarState();
-}
-
-class _TopDocsBarState extends State<TopDocsBar> {
   int _selectedindex = 0;
+
   List<bool> _isSelected = List.filled(8, false);
+
   ScrollController _controller = ScrollController();
 
-  var arr_names = [
-    'All',
-    'General',
-    'Dentist',
-    'Nutritionist',
-    'Ophthalmologist',
-    'Pediatric',
-    'Neurologist',
-    'Radiologist',
-  ];
+  CategoryController categoryController = Get.put(CategoryController());
 
-  List<double> arr_width = [
-    63.w,
-    100.w,
-    110.w,
-    150.w,
-    180.w,
-    110.w,
-    140.w,
-    130.w,
-  ];
-
-  ontapp(int containerIndex) async {
-    setState(() {
-      for (int i = 0; i < _isSelected.length; i++) {
-        if (i == containerIndex) {
-          _isSelected[i] = true;
-        } else {
-          _isSelected[i] = false;
-        }
-      }
-    });
-    if (containerIndex == 8) {
-      Navigator.pushNamed(context, MyRoutes.TopDoctorsRoute,
-          arguments: TopDocsBar());
-    } else {
-      Navigator.pushNamed(context, MyRoutes.DocsCategoryRoute,
-          arguments: containerIndex);
-
-      // setState(() {
-      //   _isSelected = List.filled(8, false);
-      // });
-    }
-  }
-
+  // var arr_names = [
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -74,27 +33,37 @@ class _TopDocsBarState extends State<TopDocsBar> {
           controller: _controller,
           scrollDirection: Axis.horizontal,
           physics: BouncingScrollPhysics(),
-          itemCount: arr_names.length,
+          itemCount: categoryController.arr_names.length,
           itemBuilder: (context, index) {
-            return Row(
-              children: [
-                InkWell(
-                  onTap: () => ontapp(index),
-                  child: Padding(
-                    padding: EdgeInsets.only(right: 10.w),
-                    child: ListItem(
-                      Text: arr_names[index],
-                      width: arr_width[index].w,
-                      fillcolor:
-                          _isSelected[index] ? colors.Logobg : Colors.white,
-                      TextColor:
-                          _isSelected[index] ? Colors.white : colors.Logobg,
-                    ),
-                  ),
-                ),
-              ],
-            );
+            return CategoryBar(index);
           },
         ));
+  }
+
+  Row CategoryBar(int index) {
+    return Row(
+      children: [
+        InkWell(
+          onTap: () {
+            categoryController.currentIndex.value = index;
+          },
+          child: Padding(
+            padding: EdgeInsets.only(right: 10.w),
+            child: Obx(
+              () => ListItem(
+                Text: categoryController.arr_names[index],
+                width: categoryController.arr_width[index].w,
+                fillcolor: categoryController.currentIndex.value == index
+                    ? colors.Logobg
+                    : Colors.white,
+                TextColor: categoryController.currentIndex.value == index
+                    ? Colors.white
+                    : colors.Logobg,
+              ),
+            ),
+          ),
+        ),
+      ],
+    );
   }
 }
