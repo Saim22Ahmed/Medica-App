@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:medo_app/Provider/DoctorsProvider.dart';
-import 'package:medo_app/Provider/cardProvider.dart';
+import 'package:get/get_navigation/src/root/get_material_app.dart';
+
 import 'package:medo_app/screens.dart/Doc_categoery_screens/docs_category.dart';
 import 'package:medo_app/screens.dart/DoctorDetails/doctor_details.dart';
 import 'package:medo_app/screens.dart/Doctors_screen/Doctors_screen.dart';
@@ -47,16 +47,16 @@ class MyApp extends StatelessWidget {
                 create: (context) => FavoutitesModelProvider()),
             // ChangeNotifierProvider(create: (context) => DoctorsProvider()),
             // ChangeNotifierProvider(create: (context) => DocsCategoryProvider()),
-            ChangeNotifierProvider(create: (context) => CardProvider()),
+            // ChangeNotifierProvider(create: (context) => CardProvider()),
           ],
-          child: MaterialApp(
+          child: GetMaterialApp(
             title: 'Flutter Demo',
             debugShowCheckedModeBanner: false,
             theme: ThemeData(
               primarySwatch: Colors.blue,
               fontFamily: GoogleFonts.mukta().fontFamily,
             ),
-            home: DoctorsScreen(),
+            home: HomeScreen(),
             routes: {
               MyRoutes.SplashScr2Route: (context) => SplashScreen2(),
               MyRoutes.IntroRoute: (context) => IntroScreens(),

@@ -1,20 +1,28 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 
+import '../../controllers/FavouriteDoctors_controllers.dart';
 import '../../models/DoctorModel.dart';
 import '../../resources/pics.dart';
 
 class ItemCard extends StatelessWidget {
-  const ItemCard({
+  ItemCard({
     super.key,
     required this.currentdoctor,
     required this.ItemClickedHandler,
+    required this.FavIconClickHandler,
+    required this.favicon,
   });
 
   final Item currentdoctor;
   final Function ItemClickedHandler;
+  final Function FavIconClickHandler;
+  final dynamic favicon;
 
+  // controllers //
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -107,20 +115,18 @@ class ItemCard extends StatelessWidget {
                   child: Align(
                     alignment: Alignment.topRight,
                     child: InkWell(
-                      onTap: () {},
-                      // onTap: () {
-                      //   istap = !istap;
-                      //   setState(() {});
-                      // },
+                      onTap: () {
+                        FavIconClickHandler();
+                      },
                       child: Image(
-                        image: MyPics.ufblueheart,
+                        image: favicon,
                         fit: BoxFit.cover,
                         height: 25.h,
                         width: 25.w,
                       ),
                     ),
                   ),
-                )
+                ),
               ],
             ),
           ),

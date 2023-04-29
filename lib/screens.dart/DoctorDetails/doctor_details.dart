@@ -13,7 +13,7 @@ class DoctorDetailsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Text('sdsa'),
+      body: Center(child: Text('sdsa')),
     );
   }
 }

@@ -4,8 +4,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:icons_plus/icons_plus.dart';
+import 'package:medo_app/controllers/HomeAppBar_controllers/notification_controller.dart';
 import 'package:medo_app/resources/colors.dart';
 import 'package:medo_app/resources/pics.dart';
 import 'package:medo_app/resources/widgets/widgets.dart';
@@ -16,6 +19,7 @@ import 'package:medo_app/screens.dart/Home_screen/list_view_item.dart';
 import 'package:medo_app/utils/routes/routes_names.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
+import '../../controllers/HomeAppBar_controllers/Favourite_controller.dart';
 import 'TopDocsBar.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -26,9 +30,11 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  bool isfilled = false;
-  bool isnotify = false;
   final _pagecontroller = PageController();
+  NotificationController notificationController =
+      Get.put(NotificationController());
+  FavouritePageController favouriteController =
+      Get.put(FavouritePageController());
   int _currentindex = 0;
   int _selectedindex = 0;
   bool isAnimationRunning = true;
@@ -327,7 +333,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 style: TextStyle(
                   height: 1.6.h,
                   fontFamily: GoogleFonts.mukta().fontFamily,
-                  fontSize: 26.sp,
+                  fontSize: 24.sp,
                   color: Colors.black,
                   fontWeight: FontWeight.w600,
                 ),
@@ -349,20 +355,18 @@ class _HomeScreenState extends State<HomeScreen> {
       actions: [
         Row(
           children: [
-            InkWell(
-              onTap: () async {
-                setState(() {
-                  isnotify = !isnotify;
-                });
-                await Navigator.pushNamed(context, MyRoutes.NotificationsRoute);
-                setState(() {
-                  isnotify = !isnotify;
-                });
-              },
-              child: Image(
-                image: isnotify ? MyPics.filledNotiicon : MyPics.Notiicon,
-                width: 30.w,
-                height: 30.h,
+            Obx(
+              () => InkWell(
+                onTap: () {
+                  notificationController.ontapNotify();
+                },
+                child: Image(
+                  image: notificationController.isnotify.value == true
+                      ? MyPics.filledNotiicon
+                      : MyPics.Notiicon,
+                  width: 30.w,
+                  height: 30.h,
+                ),
               ),
             ),
             SizedBox(
@@ -370,20 +374,18 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             Padding(
               padding: EdgeInsets.only(right: 14.0.w),
-              child: InkWell(
-                onTap: () async {
-                  setState(() {
-                    isfilled = !isfilled;
-                  });
-                  await Navigator.pushNamed(context, MyRoutes.FavouritesRoute);
-                  setState(() {
-                    isfilled = !isfilled;
-                  });
-                },
-                child: Image(
-                  image: isfilled ? MyPics.filledHearticon : MyPics.Hearticon,
-                  width: 30.w,
-                  height: 30.h,
+              child: Obx(
+                () => InkWell(
+                  onTap: () {
+                    favouriteController.onTapFav();
+                  },
+                  child: Image(
+                    image: favouriteController.isfilled.value
+                        ? MyPics.filledHearticon
+                        : MyPics.Hearticon,
+                    width: 30.w,
+                    height: 30.h,
+                  ),
                 ),
               ),
             ),

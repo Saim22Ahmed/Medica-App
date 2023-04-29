@@ -1,5 +1,4 @@
 import 'package:flutter/cupertino.dart';
-import 'package:medo_app/Provider/DoctorsProvider.dart';
 import 'package:medo_app/models/DoctorModel.dart';
 
 class FavoutitesModelProvider with ChangeNotifier {

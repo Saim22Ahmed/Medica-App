@@ -64,7 +64,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
           children: [
             MyListTile(
               desc:
-                  'You have successfully canceled your appointment with Dr Alan Watson on January 24, 2024, 13:00 p.m. 80% of the funds will be returned to your account.',
+                  'You have successfully canceled your appointment with Dr Emily Jhonson on April 12, 2023, 10:00 p.m. 80% of the funds will be returned to your account.',
               title: 'Appointment Cancelled',
               subtitle: 'Today | 15:36 PM',
               icon: Image(
@@ -78,7 +78,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
             ),
             MyListTile(
               desc:
-                  "You have successfully changed schedule an appointment with Dr. Alan Watson on December 24, 2024, 13:00 pm. Don't forget to activate your reminder.",
+                  "You have successfully changed schedule an appointment with Dr. Alan Watson on January 24, 2023, 13:00 pm. Don't forget to activate your reminder.",
               title: 'Schedule Changed',
               subtitle: 'Yesterday | 09:23 AM',
               icon: Image(
@@ -128,6 +128,19 @@ class _NotificationScreenState extends State<NotificationScreen> {
                 fit: BoxFit.cover,
               ),
               iconbgcolor: Color.fromARGB(255, 77, 124, 218).withOpacity(0.1),
+            ),
+            MyListTile(
+              desc:
+                  'You have successfully canceled your appointment with Dr. Wang Zhenyi on December 14, 2022, 11:00 p.m. 80% of the funds will be returned to your account.',
+              title: 'Appointment Cancelled',
+              subtitle: '14 Dec, 2022 | 10:00 PM',
+              icon: Image(
+                image: MyPics.cancel,
+                height: 50.h,
+                width: 50.w,
+                fit: BoxFit.cover,
+              ),
+              iconbgcolor: Color(0xffff6077).withOpacity(0.1),
             ),
           ],
         ),

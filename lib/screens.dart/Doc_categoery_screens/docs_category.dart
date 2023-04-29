@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
-import 'package:medo_app/Provider/DoctorsProvider.dart';
 import 'package:medo_app/Provider/Favourite_Provider.dart';
 import 'package:medo_app/models/DoctorModel.dart';
 import 'package:medo_app/resources/pics.dart';

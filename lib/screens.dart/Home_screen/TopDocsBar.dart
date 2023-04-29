@@ -43,20 +43,23 @@ class TopDocsBar extends StatelessWidget {
   Row CategoryBar(int index) {
     return Row(
       children: [
-        InkWell(
-          onTap: () {
-            categoryController.currentIndex.value = index;
-          },
-          child: Padding(
-            padding: EdgeInsets.only(right: 10.w),
-            child: Obx(
-              () => ListItem(
+        Obx(
+          () => InkWell(
+            onTap: () {
+              categoryController.currentIndex.value = index;
+              categoryController.istapped();
+            },
+            child: Padding(
+              padding: EdgeInsets.only(right: 10.w),
+              child: ListItem(
                 Text: categoryController.arr_names[index],
                 width: categoryController.arr_width[index].w,
-                fillcolor: categoryController.currentIndex.value == index
+                fillcolor: categoryController.currentIndex.value == index &&
+                        categoryController.istap == true
                     ? colors.Logobg
                     : Colors.white,
-                TextColor: categoryController.currentIndex.value == index
+                TextColor: categoryController.currentIndex.value == index &&
+                        categoryController.istap == true
                     ? Colors.white
                     : colors.Logobg,
               ),
