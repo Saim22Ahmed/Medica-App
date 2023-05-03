@@ -8,18 +8,21 @@ class FavouriteDoctorControllers extends GetxController {
   RxBool isicontap = false.obs;
 
   void ontap() {
-    isicontap.value = !isicontap.value;
+    isicontap.value = true;
   }
 
   void AddtoCart(index) {
     cartitems.value.add(index);
+    cartitems.refresh();
   }
 
   void RemoveFromCart(index) {
     cartitems.value.remove(index);
+    cartitems.refresh();
   }
 
   void Printitems() {
     print(cartitems.length);
+    // cartitems.refresh();
   }
 }

@@ -21,7 +21,7 @@ class Favourites_screen extends StatelessWidget {
       Get.put(FavouriteDoctorControllers());
   @override
   Widget build(BuildContext context) {
-    // final favouritesProvider = Provider.of<FavoutitesModelProvider>(context);
+    print('fav screen');
     return Scaffold(
       appBar: ThemeAppbar(
         title: 'My Favourites',
@@ -31,21 +31,27 @@ class Favourites_screen extends StatelessWidget {
       ),
       body: Padding(
           padding: EdgeInsets.symmetric(vertical: 5.h, horizontal: 10.w),
-          child: ListView.builder(
-            // itemExtent: 150,
-            physics: BouncingScrollPhysics(),
-            itemCount: favouriteDoctorControllers.cartitems.length,
-            itemBuilder: (context, index) {
-              var currentdoctor = favouriteDoctorControllers.cartitems[index];
-              return ItemCard(
+          child: Obx(
+            () => ListView.builder(
+              // itemExtent: 150,
+              physics: BouncingScrollPhysics(),
+              itemCount: favouriteDoctorControllers.cartitems.length,
+              itemBuilder: (context, index) {
+                var currentdoctor = favouriteDoctorControllers.cartitems[index];
+                return ItemCard(
+                  currentdoctor: currentdoctor,
+                  ItemClickedHandler: () {},
+                  FavIconClickHandler: () {
+                    favouriteDoctorControllers.RemoveFromCart(currentdoctor);
+                    favouriteDoctorControllers.Printitems();
+                  },
                   favicon: favouriteDoctorControllers.cartitems
                           .contains(currentdoctor)
                       ? MyPics.blueheart
                       : MyPics.ufblueheart,
-                  currentdoctor: currentdoctor,
-                  ItemClickedHandler: () {},
-                  FavIconClickHandler: () {});
-            },
+                );
+              },
+            ),
           )),
     );
   }

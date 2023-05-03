@@ -26,7 +26,7 @@ class ItemCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(vertical: 5.0.w),
+      padding: EdgeInsets.symmetric(vertical: 5.0.h, horizontal: 8.w),
       child: InkWell(
         onTap: () {
           ItemClickedHandler();
@@ -35,7 +35,7 @@ class ItemCard extends StatelessWidget {
           elevation: 0.3,
           shadowColor: Colors.blue,
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(15.r),
+            borderRadius: BorderRadius.circular(18.r),
           ),
           color: Colors.white,
           child: Container(
@@ -46,10 +46,10 @@ class ItemCard extends StatelessWidget {
                 Positioned(
                   top: 15.h,
                   left: 10.w,
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(15.r),
-                    child: Transform.scale(
-                      scale: 1,
+                  child: Transform.scale(
+                    scale: 1.h,
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(25.r),
                       child: Image(
                         image: currentdoctor.image,
                         height: 110.h,
@@ -75,14 +75,31 @@ class ItemCard extends StatelessWidget {
                 Positioned(
                   left: 135.w,
                   top: 70.h,
-                  child: Text(
-                    currentdoctor.desc,
-                    style: TextStyle(
-                      color: Colors.grey[600],
-                      fontSize: 15.sp,
-                      fontWeight: FontWeight.w600,
-                      letterSpacing: 0.5.sp,
-                    ),
+                  child: Row(
+                    children: [
+                      Text(
+                        currentdoctor.category,
+                        style: TextStyle(
+                          color: Colors.grey[600],
+                          fontSize: 15.sp,
+                          fontWeight: FontWeight.w600,
+                          letterSpacing: 0.5.sp,
+                        ),
+                      ),
+                      SizedBox(
+                        width: 20.w,
+                        child: Center(child: Text('|')),
+                      ),
+                      Text(
+                        currentdoctor.hospital,
+                        style: TextStyle(
+                          color: Colors.grey[600],
+                          fontSize: 15.sp,
+                          fontWeight: FontWeight.w600,
+                          letterSpacing: 0.5.sp,
+                        ),
+                      ),
+                    ],
                   ),
                 ),
                 Positioned(

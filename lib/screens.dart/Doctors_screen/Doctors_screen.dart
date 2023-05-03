@@ -18,7 +18,6 @@ class DoctorsScreen extends StatelessWidget {
 
   FavouriteDoctorControllers favouriteDoctorControllers =
       Get.put(FavouriteDoctorControllers());
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,10 +35,10 @@ class DoctorsScreen extends StatelessWidget {
                       () => ItemCard(
                         currentdoctor: currentdoctor,
                         ItemClickedHandler: () {
-                          Get.toNamed(MyRoutes.DoctorDetailsRoutes);
+                          Get.to(
+                              () => DoctorDetailsScreen(doctor: currentdoctor));
                         },
                         FavIconClickHandler: () {
-                          favouriteDoctorControllers.ontap();
                           if (!favouriteDoctorControllers.cartitems
                               .contains(currentdoctor)) {
                             favouriteDoctorControllers.AddtoCart(currentdoctor);
