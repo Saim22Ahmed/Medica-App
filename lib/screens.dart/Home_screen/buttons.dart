@@ -8,10 +8,18 @@ import 'package:medo_app/resources/colors.dart';
 import 'package:medo_app/resources/pics.dart';
 
 class CupButton extends StatefulWidget {
-  const CupButton({super.key, required this.title, required this.image});
+  const CupButton({
+    super.key,
+    required this.title,
+    required this.image,
+    this.color,
+    this.fontweight = FontWeight.w600,
+  });
 
   final String title;
   final AssetImage image;
+  final dynamic color;
+  final FontWeight fontweight;
 
   @override
   State<CupButton> createState() => _CupButtonState();
@@ -44,6 +52,7 @@ class _CupButtonState extends State<CupButton> {
             fit: BoxFit.cover,
             width: 45.w,
             height: 45.h,
+            color: widget.color,
           ),
         ),
         SizedBox(
@@ -55,8 +64,8 @@ class _CupButtonState extends State<CupButton> {
 
           // overflow: TextOverflow.clip,
           style: TextStyle(
-            letterSpacing: 1.w,
-            fontWeight: FontWeight.w600,
+            // letterSpacing: 1.w,
+            fontWeight: widget.fontweight,
             fontSize: 16.sp,
           ),
         ),

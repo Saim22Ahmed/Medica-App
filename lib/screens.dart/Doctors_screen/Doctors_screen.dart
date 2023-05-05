@@ -21,7 +21,11 @@ class DoctorsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: ThemeAppbar(title: 'Top Doctors', ontap: () => Get.back()),
+        appBar: ThemeAppbar(
+            title: 'Top Doctors',
+            ontap: () {
+              Get.back();
+            }),
         body: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [

@@ -133,6 +133,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           CupButton(
                             image: MyPics.user,
                             title: 'General..',
+                            fontweight: FontWeight.w500,
                           ),
                           SizedBox(
                             width: 28.w,
@@ -140,6 +141,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           CupButton(
                             image: MyPics.teeth,
                             title: 'Dentist',
+                            fontweight: FontWeight.w500,
                           ),
                           SizedBox(
                             width: 28.w,
@@ -147,6 +149,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           CupButton(
                             image: MyPics.eye,
                             title: 'Opthal..',
+                            fontweight: FontWeight.w500,
                           ),
                           SizedBox(
                             width: 28.w,
@@ -154,6 +157,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           CupButton(
                             image: MyPics.nutrition,
                             title: 'Nutrition..',
+                            fontweight: FontWeight.w500,
                           )
                         ],
                       ),
@@ -168,6 +172,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           CupButton(
                             image: MyPics.brain3,
                             title: 'Neurolo..',
+                            fontweight: FontWeight.w500,
                           ),
                           SizedBox(
                             width: 28.w,
@@ -175,6 +180,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           CupButton(
                             image: MyPics.infant,
                             title: 'Pediatric',
+                            fontweight: FontWeight.w500,
                           ),
                           SizedBox(
                             width: 28.w,
@@ -182,6 +188,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           CupButton(
                             image: MyPics.radiology,
                             title: 'Radiolo..',
+                            fontweight: FontWeight.w500,
                           ),
                           SizedBox(
                             width: 28.w,
@@ -189,6 +196,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           CupButton(
                             image: MyPics.more,
                             title: 'More',
+                            fontweight: FontWeight.w500,
                           )
                         ],
                       ),

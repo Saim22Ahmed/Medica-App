@@ -116,6 +116,18 @@ class ItemCard extends StatelessWidget {
                         width: 8.w,
                       ),
                       Text(
+                        currentdoctor.rating,
+                        style: TextStyle(
+                          color: Colors.grey[600],
+                          fontSize: 15.sp,
+                          fontWeight: FontWeight.w600,
+                          letterSpacing: 0.3.sp,
+                        ),
+                      ),
+                      SizedBox(
+                        width: 10.h,
+                      ),
+                      Text(
                         currentdoctor.reviews,
                         style: TextStyle(
                           color: Colors.grey[600],

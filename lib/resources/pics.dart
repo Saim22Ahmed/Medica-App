@@ -41,6 +41,7 @@ class MyPics {
   static AssetImage calender = AssetImage('assets/images/mycalender.png');
   static AssetImage calender1 = AssetImage('assets/images/mycalender1.png');
   static AssetImage search = AssetImage('assets/images/search.png');
+  static AssetImage indicator = AssetImage('assets/images/indicator.gif');
 }
 
 class Docpics {
@@ -60,4 +61,12 @@ class Docpics {
   static AssetImage Radiologist = AssetImage('assets/images/Radiologist.png');
   static AssetImage Nutritionist1 =
       AssetImage('assets/images/Nutritionist1.png');
+}
+
+class DocDetail {
+  static AssetImage patient = AssetImage('assets/images/patient.png');
+  static AssetImage chat = AssetImage('assets/images/chat.png');
+
+  static AssetImage user3 = AssetImage('assets/images/user3.png');
+  static AssetImage graph = AssetImage('assets/images/graph.png');
 }
