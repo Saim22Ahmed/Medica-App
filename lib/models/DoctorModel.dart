@@ -86,9 +86,9 @@ class DoctorModel {
       hospital: 'Johns Hopkins Hospital',
       trailing: MyPics.Hearticon,
       name: 'Dr. David Kim',
-      desc: 'Opthalmologist',
+      desc: 'Ophthalmologist',
       reviews: '(4,444 reviews)',
-      category: 'Opthalmologist',
+      category: 'Ophthalmologist',
       location: 'New York , USA',
       rating: '4.6',
       about:
@@ -99,9 +99,9 @@ class DoctorModel {
       hospital: 'Brooklyn Hospital',
       trailing: MyPics.Hearticon,
       name: 'Dr. Tim Pattinson',
-      desc: 'Opthalmologist',
+      desc: 'Ophthalmologist',
       reviews: '(5,435 reviews)',
-      category: 'Opthalmologist',
+      category: 'Ophthalmologist',
       location: 'Toronto , Canada',
       rating: '4.8',
       about:
@@ -125,9 +125,9 @@ class DoctorModel {
       hospital: 'Riverbend Hospital',
       trailing: MyPics.Hearticon,
       name: 'Dr. Chadwick West',
-      desc: 'Opthalmologist',
+      desc: 'Ophthalmologist',
       reviews: '(4,754 reviews)',
-      category: 'Opthalmologist',
+      category: 'Ophthalmologist',
       location: 'Madrid , Spain',
       rating: '4.6',
       about:
@@ -194,7 +194,7 @@ class DoctorCategoryModel {
           item.category == 'Dentist' ||
           item.category == 'Nutritionist' ||
           item.category == 'Pediatric' ||
-          item.category == 'Opthalmologist')
+          item.category == 'Ophthalmologist')
       .toList();
   List<Item> generalDocs =
       DoctorModel.items.where((item) => item.category == 'General').toList();
@@ -206,6 +206,6 @@ class DoctorCategoryModel {
   List<Item> Pediatric =
       DoctorModel.items.where((item) => item.category == 'Pediatric').toList();
   List<Item> Opthalmologist = DoctorModel.items
-      .where((item) => item.category == 'Opthalmologist')
+      .where((item) => item.category == 'Ophthalmologist')
       .toList();
 }

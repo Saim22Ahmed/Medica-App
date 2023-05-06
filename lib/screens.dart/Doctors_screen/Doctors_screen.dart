@@ -5,6 +5,7 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:medo_app/controllers/FavouriteDoctors_controllers.dart';
+import 'package:medo_app/controllers/doctors_controllers/category_controller.dart';
 import 'package:medo_app/models/DoctorModel.dart';
 import 'package:medo_app/screens.dart/DoctorDetails/doctor_details.dart';
 import 'package:medo_app/screens.dart/favourites_screen/ThemeAppbar.dart';
@@ -18,6 +19,8 @@ class DoctorsScreen extends StatelessWidget {
 
   FavouriteDoctorControllers favouriteDoctorControllers =
       Get.put(FavouriteDoctorControllers());
+  DoctorCategoryModel docscategory = DoctorCategoryModel();
+  CategoryController categoryController = Get.put(CategoryController());
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,9 +35,10 @@ class DoctorsScreen extends StatelessWidget {
             Expanded(
               child: ListView.builder(
                   physics: BouncingScrollPhysics(),
-                  itemCount: DoctorModel.items.length,
+                  itemCount: categoryController.CurrentDocCtgry(),
                   itemBuilder: (context, index) {
-                    var currentdoctor = DoctorModel.items[index];
+                    var currentdoctor =
+                        categoryController.CurrentDocItem(index);
                     return Obx(
                       () => ItemCard(
                         currentdoctor: currentdoctor,

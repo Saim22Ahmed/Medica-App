@@ -48,6 +48,8 @@ class TopDocsBar extends StatelessWidget {
             onTap: () {
               categoryController.currentIndex.value = index;
               categoryController.istapped();
+              categoryController.CheckDocCtgry(index);
+              categoryController.CurrentDocCtgry();
             },
             child: Padding(
               padding: EdgeInsets.only(right: 10.w),

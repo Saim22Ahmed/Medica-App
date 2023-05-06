@@ -58,7 +58,7 @@ class MyApp extends StatelessWidget {
               primarySwatch: Colors.blue,
               fontFamily: GoogleFonts.mukta().fontFamily,
             ),
-            home: DoctorsScreen(),
+            home: HomeScreen(),
             routes: {
               MyRoutes.SplashScr2Route: (context) => SplashScreen2(),
               MyRoutes.IntroRoute: (context) => IntroScreens(),

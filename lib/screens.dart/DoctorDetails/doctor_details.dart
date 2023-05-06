@@ -5,6 +5,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:medo_app/controllers/RandomValue_controller.dart';
 import 'package:medo_app/resources/colors.dart';
 import 'package:medo_app/screens.dart/Doc_categoery_screens/docs_category.dart';
 import 'package:medo_app/screens.dart/Home_screen/buttons.dart';
@@ -14,16 +15,17 @@ import 'package:readmore/readmore.dart';
 import '../../models/DoctorModel.dart';
 import '../../resources/pics.dart';
 import 'Stats_bar.dart';
+import 'doctor_about.dart';
 import 'doctor_card.dart';
 
 class DoctorDetailsScreen extends StatelessWidget {
-  const DoctorDetailsScreen({
+  DoctorDetailsScreen({
     super.key,
     required this.doctor,
   });
 
   final Item doctor;
-
+  RandomController randomController = Get.put(RandomController());
   @override
   Widget build(BuildContext context) {
     print('Doc Detail');
@@ -35,44 +37,46 @@ class DoctorDetailsScreen extends StatelessWidget {
               Get.back();
             },
           ),
-          body: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 8.w),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                DoctorCard(doctor: doctor),
-                StatsBar(doctor: doctor),
-                Padding(
-                  padding: const EdgeInsets.all(18.0),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'About me',
-                        style: TextStyle(
-                          fontSize: 25.sp,
-                          fontWeight: FontWeight.bold,
-                          letterSpacing: 0.5.w,
-                        ),
-                      ),
-                      SizedBox(
-                        height: 10.h,
-                      ),
-                      ReadMoreText(
-                        doctor.about,
-                        style: TextStyle(fontSize: 16.sp, wordSpacing: 0.5.w),
-                        trimLines: 4,
-                        trimMode: TrimMode.Line,
-                        colorClickableText: colors.Logobg,
-                        trimCollapsedText: 'view more',
-                        trimExpandedText: 'view less',
-                      ),
-                    ],
-                  ),
-                ),
-              ],
+          body: SingleChildScrollView(
+            child: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 8.w),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  DoctorCard(doctor: doctor),
+                  StatsBar(doctor: doctor),
+                  DoctorAbout(doctor: doctor),
+                  WorkingTime(),
+                ],
+              ),
             ),
           )),
+    );
+  }
+
+  Padding WorkingTime() {
+    return Padding(
+      padding: EdgeInsets.only(left: 18, bottom: 18),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            'Working Time',
+            style: TextStyle(
+              fontSize: 25.sp,
+              fontWeight: FontWeight.bold,
+              letterSpacing: 0.5.w,
+            ),
+          ),
+          Text(
+            randomController.DoctorTimings(),
+            style: TextStyle(
+              fontSize: 17.sp,
+              letterSpacing: 0.5.w,
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
