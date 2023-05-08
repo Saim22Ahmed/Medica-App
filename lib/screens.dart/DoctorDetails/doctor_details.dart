@@ -15,6 +15,7 @@ import 'package:readmore/readmore.dart';
 import '../../models/DoctorModel.dart';
 import '../../resources/pics.dart';
 import 'Stats_bar.dart';
+import 'doctor reviews/doctor_reviews.dart';
 import 'doctor_about.dart';
 import 'doctor_card.dart';
 
@@ -47,6 +48,7 @@ class DoctorDetailsScreen extends StatelessWidget {
                   StatsBar(doctor: doctor),
                   DoctorAbout(doctor: doctor),
                   WorkingTime(),
+                  DocReviewScreen(doctor: doctor),
                 ],
               ),
             ),
@@ -56,7 +58,7 @@ class DoctorDetailsScreen extends StatelessWidget {
 
   Padding WorkingTime() {
     return Padding(
-      padding: EdgeInsets.only(left: 18, bottom: 18),
+      padding: EdgeInsets.only(left: 18, bottom: 15),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -67,6 +69,9 @@ class DoctorDetailsScreen extends StatelessWidget {
               fontWeight: FontWeight.bold,
               letterSpacing: 0.5.w,
             ),
+          ),
+          SizedBox(
+            height: 2.h,
           ),
           Text(
             randomController.DoctorTimings(),

@@ -42,6 +42,7 @@ class MyPics {
   static AssetImage calender1 = AssetImage('assets/images/mycalender1.png');
   static AssetImage search = AssetImage('assets/images/search.png');
   static AssetImage indicator = AssetImage('assets/images/indicator.gif');
+  static AssetImage reviewstar = AssetImage('assets/images/reviewstar.png');
 }
 
 class Docpics {
