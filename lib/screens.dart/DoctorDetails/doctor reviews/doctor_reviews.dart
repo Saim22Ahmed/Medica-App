@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
@@ -10,6 +12,7 @@ import 'package:medo_app/resources/colors.dart';
 import 'package:medo_app/resources/pics.dart';
 
 import '../../../models/DoctorModel.dart';
+import '../../../models/ReviewModel.dart';
 
 class DocReviewScreen extends StatelessWidget {
   DocReviewScreen({super.key, required this.doctor});
@@ -17,6 +20,7 @@ class DocReviewScreen extends StatelessWidget {
   final Item doctor;
   RandomController randomController = Get.put(RandomController());
   ReviewController reviewController = Get.put(ReviewController());
+
   @override
   Widget build(BuildContext context) {
     return Padding(
