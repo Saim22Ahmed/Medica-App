@@ -4,7 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../models/DoctorModel.dart';
 
 class DoctorCard extends StatelessWidget {
-  const DoctorCard({
+  DoctorCard({
     super.key,
     required this.doctor,
   });

@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:get/get_navigation/src/routes/get_route.dart';
 
 import 'package:medo_app/screens.dart/Doc_categoery_screens/docs_category.dart';
 import 'package:medo_app/screens.dart/DoctorDetails/doctor_details.dart';
 import 'package:medo_app/screens.dart/Doctors_screen/Doctors_screen.dart';
-import 'package:medo_app/screens.dart/Top_doctors_screen/All_Top_doctors.dart';
 import 'package:medo_app/Provider/Favourite_Provider.dart';
-import 'package:medo_app/screens.dart/Top_doctors_screen/doc_category_screen.dart';
 import 'package:medo_app/models/DoctorModel.dart';
 import 'package:medo_app/screens.dart/Doctors_screen/ItemWidget.dart';
 import 'package:medo_app/resources/pics.dart';
@@ -27,6 +27,8 @@ import 'package:medo_app/screens.dart/splash_screens/splash_screen_2.dart';
 import 'package:medo_app/utils/routes/routes_names.dart';
 import 'package:provider/provider.dart';
 
+import 'controllers/review_controller/user_controller.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -43,39 +45,32 @@ class MyApp extends StatelessWidget {
     return ScreenUtilInit(
       designSize: const Size(412, 892),
       builder: (context, child) {
-        return MultiProvider(
-          providers: [
-            ChangeNotifierProvider(
-                create: (context) => FavoutitesModelProvider()),
-            // ChangeNotifierProvider(create: (context) => DoctorsProvider()),
-            // ChangeNotifierProvider(create: (context) => DocsCategoryProvider()),
-            // ChangeNotifierProvider(create: (context) => CardProvider()),
-          ],
-          child: GetMaterialApp(
-            title: 'Flutter Demo',
-            debugShowCheckedModeBanner: false,
-            theme: ThemeData(
-              primarySwatch: Colors.blue,
-              fontFamily: GoogleFonts.mukta().fontFamily,
-            ),
-            home: HomeScreen(),
-            routes: {
-              MyRoutes.SplashScr2Route: (context) => SplashScreen2(),
-              MyRoutes.IntroRoute: (context) => IntroScreens(),
-              MyRoutes.Intro1Route: (context) => IntroScreen1(),
-              MyRoutes.Intro2Route: (context) => IntroScreen2(),
-              MyRoutes.Intro3Route: (context) => IntroScreen3(),
-              MyRoutes.SigninRoute: (context) => SigninScreen(),
-              MyRoutes.newaccRoute: (context) => NewAccount(),
-              MyRoutes.HomepageRoute: (context) => HomeScreen(),
-              MyRoutes.NotificationsRoute: (context) => NotificationScreen(),
-              MyRoutes.FavouritesRoute: (context) => Favourites_screen(),
-              MyRoutes.TopDoctorsRoute: (context) => TopDoctors(),
-              MyRoutes.DocsCategoryRoute: (context) => DocsCategory(),
-              // MyRoutes.DoctorDetailsRoutes: (context) => DoctorDetailsScreen(),
-              MyRoutes.DoctorScreenRoutes: (context) => DoctorsScreen(),
-            },
+        return GetMaterialApp(
+          title: 'Flutter Demo',
+          debugShowCheckedModeBanner: false,
+          theme: ThemeData(
+            primarySwatch: Colors.blue,
+            fontFamily: GoogleFonts.mukta().fontFamily,
           ),
+          home: HomeScreen(),
+          onReady: () {
+            Get.find<UserController>().fetchRandomUsers();
+          },
+          routes: {
+            MyRoutes.SplashScr2Route: (context) => SplashScreen2(),
+            MyRoutes.IntroRoute: (context) => IntroScreens(),
+            MyRoutes.Intro1Route: (context) => IntroScreen1(),
+            MyRoutes.Intro2Route: (context) => IntroScreen2(),
+            MyRoutes.Intro3Route: (context) => IntroScreen3(),
+            MyRoutes.SigninRoute: (context) => SigninScreen(),
+            MyRoutes.newaccRoute: (context) => NewAccount(),
+            MyRoutes.HomepageRoute: (context) => HomeScreen(),
+            MyRoutes.NotificationsRoute: (context) => NotificationScreen(),
+            MyRoutes.FavouritesRoute: (context) => Favourites_screen(),
+            MyRoutes.DocsCategoryRoute: (context) => DocsCategory(),
+            // MyRoutes.DoctorDetailsRoutes: (context) => DoctorDetailsScreen(),
+            MyRoutes.DoctorScreenRoutes: (context) => DoctorsScreen(),
+          },
         );
       },
     );

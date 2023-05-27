@@ -1,21 +1,28 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
-import 'package:medo_app/controllers/RandomValue_controller.dart';
-import 'package:medo_app/controllers/doctors_controllers/reviews_controller.dart';
+import 'package:medo_app/controllers/review_controller/reviews_controller.dart';
 import 'package:medo_app/resources/colors.dart';
-import 'package:medo_app/resources/pics.dart';
-
+import '../../../controllers/RandomValue_controller.dart';
 import '../../../models/DoctorModel.dart';
-import '../../../models/ReviewModel.dart';
+import '../../../resources/pics.dart';
 
 class DocReviewScreen extends StatelessWidget {
-  DocReviewScreen({super.key, required this.doctor});
+  DocReviewScreen(
+      {super.key,
+      required this.doctor,
+      required this.username,
+      required this.userimage,
+      required this.likeimage,
+      required this.LikeClickHandler});
+
+  final String username;
+  final dynamic userimage;
+  final Function LikeClickHandler;
+  final dynamic likeimage;
 
   final Item doctor;
   RandomController randomController = Get.put(RandomController());
@@ -25,34 +32,11 @@ class DocReviewScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(
-        horizontal: 18.0,
+        horizontal: 8.0,
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(
-                'Reviews',
-                style: TextStyle(
-                  fontSize: 25.sp,
-                  fontWeight: FontWeight.bold,
-                  letterSpacing: 0.5.w,
-                ),
-              ),
-              Text('See All',
-                  style: TextStyle(
-                    fontSize: 20.sp,
-                    fontWeight: FontWeight.bold,
-                    letterSpacing: 0.5.w,
-                    color: colors.Logobg,
-                  )),
-            ],
-          ),
-          SizedBox(
-            height: 5.h,
-          ),
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 10),
             child: Card(
@@ -79,7 +63,7 @@ class DocReviewScreen extends StatelessWidget {
                             children: [
                               Expanded(
                                 child: Text(
-                                  'Great doctor, highly recommend.',
+                                  randomController.RandomReviewText(),
                                   style: TextStyle(
                                     color: Colors.grey[600],
                                     fontSize: 16.sp,
@@ -93,7 +77,7 @@ class DocReviewScreen extends StatelessWidget {
                           SizedBox(
                             height: 12.h,
                           ),
-                          LikeSection()
+                          LikeSection(),
                         ],
                       ),
                     ),
@@ -107,7 +91,7 @@ class DocReviewScreen extends StatelessWidget {
     );
   }
 
-  Row ReviewHeader() {
+  ReviewHeader() {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
@@ -118,7 +102,7 @@ class DocReviewScreen extends StatelessWidget {
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(55.r),
                 child: Image(
-                  image: Docpics.Pediatric,
+                  image: NetworkImage(userimage),
                   height: 50.h,
                   width: 50.w,
                   fit: BoxFit.cover,
@@ -128,7 +112,7 @@ class DocReviewScreen extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 10.0),
               child: Text(
-                'Charlotte fair',
+                username,
                 style: TextStyle(
                   color: Colors.black,
                   fontSize: 16.sp,
@@ -160,14 +144,17 @@ class DocReviewScreen extends StatelessWidget {
     );
   }
 
-  Row LikeSection() {
+  LikeSection() {
     return Row(
       children: [
-        Image(
-          image: MyPics.ufblueheart,
-          fit: BoxFit.cover,
-          height: 25.h,
-          width: 25.w,
+        InkWell(
+          onTap: () => LikeClickHandler(),
+          child: Image(
+            image: likeimage,
+            fit: BoxFit.cover,
+            height: 25.h,
+            width: 25.w,
+          ),
         ),
         SizedBox(
           width: 10.w,
@@ -194,7 +181,7 @@ class DocReviewScreen extends StatelessWidget {
     );
   }
 
-  Container ReviewTag() {
+  ReviewTag() {
     return Container(
         padding: EdgeInsets.symmetric(horizontal: 13.w, vertical: 2.h),
         // width: 60.w,

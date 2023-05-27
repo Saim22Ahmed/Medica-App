@@ -216,12 +216,17 @@ class _HomeScreenState extends State<HomeScreen> {
                               fontWeight: FontWeight.bold,
                             ),
                           ),
-                          Text(
-                            'See All',
-                            style: TextStyle(
-                              color: colors.Logobg,
-                              fontSize: 18.sp,
-                              fontWeight: FontWeight.w600,
+                          InkWell(
+                            onTap: () {
+                              Get.toNamed(MyRoutes.DoctorScreenRoutes);
+                            },
+                            child: Text(
+                              'See All',
+                              style: TextStyle(
+                                color: colors.Logobg,
+                                fontSize: 18.sp,
+                                fontWeight: FontWeight.w600,
+                              ),
                             ),
                           ),
                         ],

@@ -8,6 +8,7 @@ import 'package:get/get_core/src/get_main.dart';
 import 'package:medo_app/resources/colors.dart';
 
 import '../../controllers/doctors_controllers/category_controller.dart';
+import '../../controllers/review_controller/user_controller.dart';
 import '../../utils/routes/routes_names.dart';
 import 'list_view_item.dart';
 
@@ -21,6 +22,7 @@ class TopDocsBar extends StatelessWidget {
   ScrollController _controller = ScrollController();
 
   CategoryController categoryController = Get.put(CategoryController());
+  UserController userController = Get.put(UserController());
 
   // var arr_names = [
   @override

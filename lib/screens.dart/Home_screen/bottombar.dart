@@ -3,20 +3,24 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:icons_plus/icons_plus.dart';
+import 'package:medo_app/controllers/bottombar_controller.dart';
 import 'package:medo_app/resources/colors.dart';
+import 'package:medo_app/screens.dart/Appointment_screen/appoint_screen.dart';
 import 'package:medo_app/utils/routes/routes_names.dart';
 
 class BottomNavBar extends StatefulWidget {
-  const BottomNavBar({super.key});
+  BottomNavBar({super.key});
 
   @override
   State<BottomNavBar> createState() => _BottomNavBarState();
 }
 
-class _BottomNavBarState extends State<BottomNavBar> {
-  int _selectedIndex = 0;
+BottomBarController _bottomBarController = Get.put(BottomBarController());
 
+class _BottomNavBarState extends State<BottomNavBar> {
   @override
   Widget build(BuildContext context) {
     var colors;
@@ -32,18 +36,10 @@ class _BottomNavBarState extends State<BottomNavBar> {
             padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 13),
             child: BottomNavigationBar(
               onTap: (index) {
-                setState(() {
-                  _selectedIndex = index;
-                  if (index == 0) {
-                    Navigator.pushNamed(context, MyRoutes.HomepageRoute);
-                  }
-                  // if (index == 1) {
-                  //   Navigator.pushNamed(context, MyRoutes.AppointmentPageRoute);
-                  // }
-                });
+                _bottomBarController.onChanged(index);
               },
               elevation: 0,
-              currentIndex: _selectedIndex,
+              currentIndex: _bottomBarController.selectedIndex.value,
               type: BottomNavigationBarType.fixed,
               iconSize: 30.sp,
               backgroundColor: Colors.grey.shade200,
