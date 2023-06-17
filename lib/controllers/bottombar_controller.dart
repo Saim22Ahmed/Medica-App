@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
 
 import '../screens.dart/Appointment_screen/appoint_screen.dart';
-import '../screens.dart/Appointment_screen/book_apnmt.dart';
+import '../screens.dart/Appointment_screen/book Appointment/book_apnmt.dart';
 import '../utils/routes/routes_names.dart';
 
 class BottomBarController extends GetxController {

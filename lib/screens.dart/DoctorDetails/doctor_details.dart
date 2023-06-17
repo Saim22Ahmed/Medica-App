@@ -10,6 +10,7 @@ import 'package:medo_app/controllers/RandomValue_controller.dart';
 import 'package:medo_app/controllers/review_controller/reviews_controller.dart';
 import 'package:medo_app/controllers/review_controller/user_controller.dart';
 import 'package:medo_app/resources/colors.dart';
+import 'package:medo_app/screens.dart/Appointment_screen/book%20Appointment/book_apnmt.dart';
 import 'package:medo_app/screens.dart/Doc_categoery_screens/docs_category.dart';
 import 'package:medo_app/screens.dart/DoctorDetails/doctor%20reviews/extended_doc_review_screen.dart';
 import 'package:medo_app/screens.dart/Home_screen/buttons.dart';
@@ -153,7 +154,13 @@ class DoctorDetailsScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              BookApmntBtn(),
+              BookApmntBtn(
+                icon: Icon(Icons.bookmark_add),
+                title: 'Book Appointment',
+                ontap: () {
+                  Get.to(() => BookAppointment());
+                },
+              ),
             ],
           )),
     );
