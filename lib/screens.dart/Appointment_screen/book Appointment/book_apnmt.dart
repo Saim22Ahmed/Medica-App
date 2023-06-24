@@ -7,6 +7,7 @@ import 'package:get/get_core/src/get_main.dart';
 import 'package:medo_app/resources/colors.dart';
 import 'package:medo_app/resources/widgets/ThemeElevatedbtn.dart';
 import 'package:medo_app/screens.dart/Appointment_screen/appoint_screen.dart';
+import 'package:medo_app/screens.dart/Appointment_screen/book%20Appointment/appnmt_info_screen.dart';
 
 import 'package:medo_app/screens.dart/Appointment_screen/book%20Appointment/time_button.dart';
 import 'package:medo_app/screens.dart/DoctorDetails/bookApnmtBtn.dart';
@@ -61,7 +62,7 @@ class BookAppointment extends StatelessWidget {
               BookingThemeButton(
                 title: 'Next',
                 ontap: () {
-                  Get.to(() => AppointmentScreen());
+                  Get.to(() => Bookinginfo());
                 },
               ),
               SizedBox(
