@@ -12,10 +12,16 @@ class ThemeAppbar extends StatefulWidget implements PreferredSizeWidget {
     required this.title,
     this.routeName,
     this.ontap,
+    this.actions = false,
+    this.actionimage1,
+    this.actionimage2,
   });
   final dynamic routeName;
   final void Function()? ontap;
   final String title;
+  final bool actions;
+  final ImageProvider<Object>? actionimage1;
+  final ImageProvider<Object>? actionimage2;
   @override
   State<ThemeAppbar> createState() => _ThemeAppbarState();
 
@@ -28,53 +34,49 @@ class _ThemeAppbarState extends State<ThemeAppbar> {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      toolbarHeight: 80.h,
-      elevation: 0,
-      backgroundColor: Colors.transparent,
-      title: Text(
-        widget.title,
-        style: TextStyle(
-          color: Colors.black,
-          fontSize: 25.sp,
-          fontWeight: FontWeight.w600,
-          letterSpacing: 1.w,
-        ),
-      ),
-      leading: InkWell(
-        onTap: widget.ontap,
-        child: Padding(
-          padding: EdgeInsets.only(left: 15.0.w),
-          child: Icon(
-            OctIcons.arrow_left_24,
+        toolbarHeight: 80.h,
+        elevation: 0,
+        backgroundColor: Colors.transparent,
+        title: Text(
+          widget.title,
+          style: TextStyle(
             color: Colors.black,
-            size: 32.h,
+            fontSize: 25.sp,
+            fontWeight: FontWeight.w600,
+            letterSpacing: 1.w,
           ),
         ),
-      ),
-      leadingWidth: 50.w,
-      actions: [
-        // Icon(
-        //   Bootstrap.search,
-        //   size: 25,
-        //   color: Colors.black,
-        // ),
-        Image(
-          image: MyPics.search,
-          width: 25.w,
-          height: 25.h,
+        leading: InkWell(
+          onTap: widget.ontap,
+          child: Padding(
+            padding: EdgeInsets.only(left: 15.0.w),
+            child: Icon(
+              OctIcons.arrow_left_24,
+              color: Colors.black,
+              size: 32.h,
+            ),
+          ),
         ),
-        SizedBox(
-          width: 20.w,
-        ),
-        Image(
-          image: MyPics.morebw,
-          width: 30.w,
-          height: 30.h,
-        ),
-        SizedBox(
-          width: 15.w,
-        ),
-      ],
-    );
+        leadingWidth: 50.w,
+        actions: widget.actions == true
+            ? [
+                Image(
+                  image: widget.actionimage1!,
+                  width: 25.w,
+                  height: 25.h,
+                ),
+                SizedBox(
+                  width: 20.w,
+                ),
+                Image(
+                  image: widget.actionimage2!,
+                  width: 30.w,
+                  height: 30.h,
+                ),
+                SizedBox(
+                  width: 15.w,
+                ),
+              ]
+            : null);
   }
 }

@@ -2,11 +2,13 @@ import 'package:get/get.dart';
 
 class CalenderController extends GetxController {
   var SelectedDate = DateTime.now().obs;
+  RxString selected_time = RxString('0');
 
   RxInt SelectedIndex = RxInt(-1);
 
   void onChangeIndex(index) {
     SelectedIndex.value = index;
+    selected_time.value = Hours[index];
   }
 
   void onDaySelected(DateTime day, DateTime FocusedDay) {

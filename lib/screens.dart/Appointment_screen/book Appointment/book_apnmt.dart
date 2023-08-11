@@ -1,17 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:medo_app/resources/colors.dart';
-import 'package:medo_app/resources/widgets/ThemeElevatedbtn.dart';
-import 'package:medo_app/screens.dart/Appointment_screen/appoint_screen.dart';
-import 'package:medo_app/screens.dart/Appointment_screen/book%20Appointment/appnmt_info_screen.dart';
+import 'package:medo_app/screens.dart/Appointment_screen/book%20Appointment/Package%20screen/package_screen.dart';
 
 import 'package:medo_app/screens.dart/Appointment_screen/book%20Appointment/time_button.dart';
-import 'package:medo_app/screens.dart/DoctorDetails/bookApnmtBtn.dart';
-import 'package:medo_app/screens.dart/Doctors_screen/Doctors_screen.dart';
 import 'package:medo_app/screens.dart/favourites_screen/ThemeAppbar.dart';
 import 'package:table_calendar/table_calendar.dart';
 
@@ -62,7 +57,7 @@ class BookAppointment extends StatelessWidget {
               BookingThemeButton(
                 title: 'Next',
                 ontap: () {
-                  Get.to(() => Bookinginfo());
+                  Get.to(() => BookPackageScreen());
                 },
               ),
               SizedBox(
