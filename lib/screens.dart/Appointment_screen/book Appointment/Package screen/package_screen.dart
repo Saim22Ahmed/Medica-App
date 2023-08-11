@@ -2,14 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
-import 'package:icons_plus/icons_plus.dart';
 import 'package:medo_app/resources/pics.dart';
 import 'package:medo_app/screens.dart/Appointment_screen/Booking_themebtn.dart';
 import 'package:medo_app/screens.dart/Appointment_screen/book%20Appointment/Package%20screen/package_widget.dart';
 import 'package:medo_app/screens.dart/favourites_screen/ThemeAppbar.dart';
-import 'package:intl/intl.dart';
 import '../../../../controllers/calender_controller.dart';
-import 'package:medo_app/resources/colors.dart';
 
 class BookPackageScreen extends StatelessWidget {
   BookPackageScreen({super.key});
